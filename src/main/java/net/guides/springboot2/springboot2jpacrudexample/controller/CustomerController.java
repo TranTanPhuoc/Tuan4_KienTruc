@@ -20,4 +20,9 @@ public class CustomerController {
 	public List<Customer> getAllPlant() {
 		return customerRepository.luongless10000();
 	}
+	@GetMapping("/sumLuong")
+	public int SumLuong() {
+		return customerRepository.SumLuong();
+	}
+	
 }

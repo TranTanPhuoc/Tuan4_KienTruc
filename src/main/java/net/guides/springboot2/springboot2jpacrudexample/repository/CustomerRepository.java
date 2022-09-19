@@ -12,4 +12,6 @@ import net.guides.springboot2.springboot2jpacrudexample.model.Customer;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 	@Query(value = "SELECT * FROM nhanvien WHERE Luong < 10000",nativeQuery = true)
 	List<Customer> luongless10000();
+	@Query(value = "SELECT SUM(luong) as Luong FROM nhanvien;",nativeQuery = true)
+	int SumLuong();
 }
