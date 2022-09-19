@@ -19,4 +19,8 @@ public class FightController {
 	public List<Flight> timDoDaiDuongDi() {
 		return flightRepository.timDoDaiDuongDi();
 	}
+	@GetMapping("/chuyenbay")
+	public List<Flight> timChuyenBay() {
+		return flightRepository.timChuyenBay();
+	}
 }

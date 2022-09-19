@@ -8,29 +8,27 @@ import javax.persistence.Table;
 @Table(name = "nhanvien")
 public class Customer {
 	@Id
-	private String maNV;
-	private String ten;
-	private int luong; 
+	private String MaNV;
+	private String Ten;
+	private int Luong; 
 	private String id;
-	
-	@Id
 	public String getMaNV() {
-		return maNV;
+		return MaNV;
 	}
 	public void setMaNV(String maNV) {
-		this.maNV = maNV;
+		MaNV = maNV;
 	}
 	public String getTen() {
-		return ten;
+		return Ten;
 	}
 	public void setTen(String ten) {
-		this.ten = ten;
+		Ten = ten;
 	}
 	public int getLuong() {
-		return luong;
+		return Luong;
 	}
 	public void setLuong(int luong) {
-		this.luong = luong;
+		Luong = luong;
 	}
 	public String getId() {
 		return id;
@@ -42,17 +40,18 @@ public class Customer {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
 	public Customer(String maNV, String ten, int luong, String id) {
 		super();
-		this.maNV = maNV;
-		this.ten = ten;
-		this.luong = luong;
+		MaNV = maNV;
+		Ten = ten;
+		Luong = luong;
 		this.id = id;
 	}
 	@Override
 	public String toString() {
-		return "Customer [maNV=" + maNV + ", ten=" + ten + ", luong=" + luong + ", id=" + id + "]";
+		return "Customer [MaNV=" + MaNV + ", Ten=" + Ten + ", Luong=" + Luong + ", id=" + id + "]";
 	}
+	
+	
 	
 }

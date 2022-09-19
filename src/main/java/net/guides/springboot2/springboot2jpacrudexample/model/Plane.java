@@ -12,60 +12,42 @@ import javax.persistence.Table;
 @Table(name = "maybay")
 public class Plane {
 	@Id
-	private long id;
-	private String loai;
-	private int tamBay;
-	
-	public Plane() {
-		
+	private String MaMB;
+	private String Loai;
+	private int TamBay;
+	public String getMaMB() {
+		return MaMB;
 	}
-	
-
-	public Plane(long id, String loai, int tamBay) {
-		super();
-		this.id = id;
-		this.loai = loai;
-		this.tamBay = tamBay;
+	public void setMaMB(String maMB) {
+		MaMB = maMB;
 	}
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	public long getId() {
-		return id;
-	}
-
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-
 	public String getLoai() {
-		return loai;
+		return Loai;
 	}
-
-
 	public void setLoai(String loai) {
-		this.loai = loai;
+		Loai = loai;
 	}
-
-
 	public int getTamBay() {
-		return tamBay;
+		return TamBay;
 	}
-
-
 	public void setTamBay(int tamBay) {
-		this.tamBay = tamBay;
+		TamBay = tamBay;
 	}
-
-
+	public Plane() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Plane(String maMB, String loai, int tamBay) {
+		super();
+		MaMB = maMB;
+		Loai = loai;
+		TamBay = tamBay;
+	}
 	@Override
 	public String toString() {
-		return "Plane [id=" + id + ", loai=" + loai + ", tamBay=" + tamBay + "]";
+		return "Plane [MaMB=" + MaMB + ", Loai=" + Loai + ", TamBay=" + TamBay + "]";
 	}
-
-
+	
 	
 	
 }

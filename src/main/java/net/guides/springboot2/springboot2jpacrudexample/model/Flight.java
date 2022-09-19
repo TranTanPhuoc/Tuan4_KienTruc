@@ -2,6 +2,7 @@ package net.guides.springboot2.springboot2jpacrudexample.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,73 +11,76 @@ import javax.persistence.Table;
 @Table(name = "chuyenbay")
 public class Flight {
 	@Id
-	private String id;
-	private String gaDi;
-	private String gaDen;
-	private int doDai;
-	private Date gioDi;
-	private Date gioDen;
-	private int chiPhi;
-	public String getId() {
-		return id;
+	@Column(columnDefinition = "varchar(5)")
+	private String macb;
+	@Column(columnDefinition = "varchar(50)")
+	private String gadi;
+	@Column(columnDefinition = "varchar(50)")
+	private String gaden;
+	private Long dodai;
+	private	Date giodi;
+	private Date gioden;
+	private Double chiphi;
+	@Override
+	public String toString() {
+		return "Flight [macb=" + macb + ", gadi=" + gadi + ", gaden=" + gaden + ", dodai=" + dodai + ", giodi=" + giodi
+				+ ", gioden=" + gioden + ", chiphi=" + chiphi + "]";
 	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public String getGaDi() {
-		return gaDi;
-	}
-	public void setGaDi(String gaDi) {
-		this.gaDi = gaDi;
-	}
-	public String getGaDen() {
-		return gaDen;
-	}
-	public void setGaDen(String gaDen) {
-		this.gaDen = gaDen;
-	}
-	public int getDoDai() {
-		return doDai;
-	}
-	public void setDoDai(int doDai) {
-		this.doDai = doDai;
-	}
-	public Date getGioDi() {
-		return gioDi;
-	}
-	public void setGioDi(Date gioDi) {
-		this.gioDi = gioDi;
-	}
-	public Date getGioDen() {
-		return gioDen;
-	}
-	public void setGioDen(Date gioDen) {
-		this.gioDen = gioDen;
-	}
-	public int getChiPhi() {
-		return chiPhi;
-	}
-	public void setChiPhi(int chiPhi) {
-		this.chiPhi = chiPhi;
+	public Flight(String macb, String gadi, String gaden, Long dodai, Date giodi, Date gioden, Double chiphi) {
+		super();
+		this.macb = macb;
+		this.gadi = gadi;
+		this.gaden = gaden;
+		this.dodai = dodai;
+		this.giodi = giodi;
+		this.gioden = gioden;
+		this.chiphi = chiphi;
 	}
 	public Flight() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Flight(String id, String gaDi, String gaDen, int doDai, Date gioDi, Date gioDen, int chiPhi) {
-		super();
-		this.id = id;
-		this.gaDi = gaDi;
-		this.gaDen = gaDen;
-		this.doDai = doDai;
-		this.gioDi = gioDi;
-		this.gioDen = gioDen;
-		this.chiPhi = chiPhi;
+	public String getMacb() {
+		return macb;
 	}
-	@Override
-	public String toString() {
-		return "Flight [id=" + id + ", gaDi=" + gaDi + ", gaDen=" + gaDen + ", doDai=" + doDai + ", gioDi=" + gioDi
-				+ ", gioDen=" + gioDen + ", chiPhi=" + chiPhi + "]";
+	public void setMacb(String macb) {
+		this.macb = macb;
 	}
-	
+	public String getGadi() {
+		return gadi;
+	}
+	public void setGadi(String gadi) {
+		this.gadi = gadi;
+	}
+	public String getGaden() {
+		return gaden;
+	}
+	public void setGaden(String gaden) {
+		this.gaden = gaden;
+	}
+	public Long getDodai() {
+		return dodai;
+	}
+	public void setDodai(Long dodai) {
+		this.dodai = dodai;
+	}
+	public Date getGiodi() {
+		return giodi;
+	}
+	public void setGiodi(Date giodi) {
+		this.giodi = giodi;
+	}
+	public Date getGioden() {
+		return gioden;
+	}
+	public void setGioden(Date gioden) {
+		this.gioden = gioden;
+	}
+	public Double getChiphi() {
+		return chiphi;
+	}
+	public void setChiphi(Double chiphi) {
+		this.chiphi = chiphi;
+	}
+
 }
