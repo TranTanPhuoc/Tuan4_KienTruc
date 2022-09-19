@@ -7,12 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import net.guides.springboot2.springboot2jpacrudexample.model.Flight;
-import net.guides.springboot2.springboot2jpacrudexample.model.Plane;
 
 @Repository
-public interface FlightRepository extends JpaRepository<Flight, Long>{
-	
-	
-//	@Query(value="SELECT * FROM maybay WHERE TamBay > 10000 ",nativeQuery = true)
-//	List<Flight> findFlighGreaterThan10000();
+public interface FlightReSponsitory extends JpaRepository<Flight, Long> {
+	@Query(value="SELECT * FROM chuyenbay Where(DoDai > 8000 and DoDai < 10000)",nativeQuery = true)
+	List<Flight> timDoDaiDuongDi();
+
 }

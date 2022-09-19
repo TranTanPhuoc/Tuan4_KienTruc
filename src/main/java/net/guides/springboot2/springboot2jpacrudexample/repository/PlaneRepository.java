@@ -19,4 +19,5 @@ public interface PlaneRepository extends JpaRepository<Plane, Long>{
 	List<Plane> findPlanesGoToDalat();
 	@Query(value="SELECT * FROM maybay WHERE TamBay > 10000 ",nativeQuery = true)
 	List<Plane> findPlaneGreaterThan10000();
+	
 }

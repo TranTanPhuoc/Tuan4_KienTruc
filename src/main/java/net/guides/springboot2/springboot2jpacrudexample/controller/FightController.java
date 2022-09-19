@@ -8,13 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.guides.springboot2.springboot2jpacrudexample.model.Flight;
-import net.guides.springboot2.springboot2jpacrudexample.model.Plane;
-import net.guides.springboot2.springboot2jpacrudexample.repository.FlightRepository;
+import net.guides.springboot2.springboot2jpacrudexample.repository.FlightReSponsitory;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("api/flight")
 public class FightController {
 	@Autowired
-	private FlightRepository flightRepository;
-
+	private FlightReSponsitory flightRepository;
+	@GetMapping("/dodai")
+	public List<Flight> timDoDaiDuongDi() {
+		return flightRepository.timDoDaiDuongDi();
+	}
 }

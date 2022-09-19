@@ -3,12 +3,8 @@ package net.guides.springboot2.springboot2jpacrudexample.model;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-
 
 @Entity
 @Table(name = "chuyenbay")
@@ -21,8 +17,6 @@ public class Flight {
 	private Date gioDi;
 	private Date gioDen;
 	private int chiPhi;
-	
-	@Id
 	public String getId() {
 		return id;
 	}
@@ -65,6 +59,10 @@ public class Flight {
 	public void setChiPhi(int chiPhi) {
 		this.chiPhi = chiPhi;
 	}
+	public Flight() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Flight(String id, String gaDi, String gaDen, int doDai, Date gioDi, Date gioDen, int chiPhi) {
 		super();
 		this.id = id;
@@ -80,10 +78,5 @@ public class Flight {
 		return "Flight [id=" + id + ", gaDi=" + gaDi + ", gaDen=" + gaDen + ", doDai=" + doDai + ", gioDi=" + gioDi
 				+ ", gioDen=" + gioDen + ", chiPhi=" + chiPhi + "]";
 	}
-	public Flight() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
 	
 }
