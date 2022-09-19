@@ -24,10 +24,13 @@ public class PlaneController {
 	public List<Plane> getPlanesToDalat() {
 		return planeRepository.findAll();
 	}
-	@GetMapping("/flights10000")
+	@GetMapping("/planes10000")
 	List<Plane> findPlaneGreaterThan10000(){
 		return planeRepository.findPlaneGreaterThan10000();
 	};
-
+	@GetMapping("boeing")
+	List<Plane> findLoai(){
+		return planeRepository.findLoai();
+	}
 
 }
