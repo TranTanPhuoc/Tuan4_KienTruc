@@ -23,4 +23,8 @@ public class FightController {
 	public List<Flight> timChuyenBay() {
 		return flightRepository.timChuyenBay();
 	}
+	@GetMapping("/chuyenbaySG")
+	public List<Flight> timChuyenBaySG(){
+		return flightRepository.timChuyenBaySG();
+	}
 }

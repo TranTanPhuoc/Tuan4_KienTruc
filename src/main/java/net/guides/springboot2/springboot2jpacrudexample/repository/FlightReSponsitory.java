@@ -14,4 +14,6 @@ public interface FlightReSponsitory  extends JpaRepository<Flight, Long> {
 	List<Flight> timDoDaiDuongDi();
 	@Query(value="SELECT * FROM chuyenbay WHERE (GaDi = \"SGN\" AND GaDen = \"BMV\")",nativeQuery = true)
 	List<Flight> timChuyenBay();
+	@Query(value="SELECT * FROM chuyenbay WHERE (GaDi = \"SGN\")",nativeQuery = true)
+	List<Flight> timChuyenBaySG();
 }
