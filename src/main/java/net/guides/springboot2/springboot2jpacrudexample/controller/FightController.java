@@ -17,14 +17,14 @@ public class FightController {
 	private FlightReSponsitory flightRepository;
 	@GetMapping("/dodai")
 	public List<Flight> timDoDaiDuongDi() {
-		return flightRepository.timDoDaiDuongDi();
+		return flightRepository.Cau4();
 	}
 	@GetMapping("/chuyenbay")
 	public List<Flight> timChuyenBay() {
-		return flightRepository.timChuyenBay();
+		return flightRepository.Cau5();
 	}
 	@GetMapping("/chuyenbaySG")
 	public List<Flight> timChuyenBaySG(){
-		return flightRepository.timChuyenBaySG();
+		return flightRepository.Cau6();
 	}
 }

@@ -20,17 +20,13 @@ public class PlaneController {
 	public List<Plane> getAllPlant() {
 		return planeRepository.findAll();
 	}
-	@GetMapping("/planes/datlat")
-	public List<Plane> getPlanesToDalat() {
-		return planeRepository.findAll();
-	}
 	@GetMapping("/planes10000")
 	List<Plane> findPlaneGreaterThan10000(){
-		return planeRepository.findPlaneGreaterThan10000();
+		return planeRepository.Cau2();
 	};
 	@GetMapping("boeing")
 	List<Plane> findLoai(){
-		return planeRepository.findLoai();
+		return planeRepository.Cau7();
 	}
 
 }

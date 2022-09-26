@@ -11,9 +11,9 @@ import net.guides.springboot2.springboot2jpacrudexample.model.Flight;
 @Repository
 public interface FlightReSponsitory  extends JpaRepository<Flight, Long> {
 	@Query(value="SELECT * FROM chuyenbay WHERE DoDai > 8000 and DoDai < 10000",nativeQuery = true)
-	List<Flight> timDoDaiDuongDi();
+	List<Flight> Cau4();
 	@Query(value="SELECT * FROM chuyenbay WHERE (GaDi = \"SGN\" AND GaDen = \"BMV\")",nativeQuery = true)
-	List<Flight> timChuyenBay();
+	List<Flight> Cau5();
 	@Query(value="SELECT * FROM chuyenbay WHERE (GaDi = \"SGN\")",nativeQuery = true)
-	List<Flight> timChuyenBaySG();
+	List<Flight> Cau6();
 }

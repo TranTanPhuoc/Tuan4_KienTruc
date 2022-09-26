@@ -16,13 +16,17 @@ import net.guides.springboot2.springboot2jpacrudexample.repository.CustomerRepos
 public class CustomerController {
 	@Autowired
 	private CustomerRepository customerRepository;
-	@GetMapping("/luongless10000")
+	@GetMapping("/Cau3")
 	public List<Customer> getAllPlant() {
-		return customerRepository.luongless10000();
+		return customerRepository.Cau3();
 	}
-	@GetMapping("/sumLuong")
+	@GetMapping("/Cau8")
 	public int SumLuong() {
-		return customerRepository.SumLuong();
+		return customerRepository.Cau8();
+	}
+	@GetMapping("/Cau9")
+	public List<Customer> Cau9() {
+		return customerRepository.Cau9();
 	}
 	
 }

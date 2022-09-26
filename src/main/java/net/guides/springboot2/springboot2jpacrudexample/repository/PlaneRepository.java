@@ -18,8 +18,8 @@ public interface PlaneRepository extends JpaRepository<Plane, Long>{
 	@Query(value="SELECT * FROM maybay ",nativeQuery = true)
 	List<Plane> findPlanesGoToDalat();
 	@Query(value="SELECT * FROM maybay WHERE TamBay > 10000 ",nativeQuery = true)
-	List<Plane> findPlaneGreaterThan10000();
+	List<Plane> Cau2();
 	@Query(value="SELECT * FROM maybay WHERE loai like \"%Boeing%\" ",nativeQuery = true)
-	List<Plane> findLoai();
+	List<Plane> Cau7();
 	
 }
